@@ -8,8 +8,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +23,44 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.recall-markdown > * + * { margin-top: 0.75rem; }
+.recall-markdown h1, .recall-markdown h2, .recall-markdown h3 { font-weight: 700; line-height: 1.3; }
+.recall-markdown h1 { font-size: 1.25rem; }
+.recall-markdown h2 { font-size: 1.125rem; }
+.recall-markdown h3 { font-size: 1rem; }
+.recall-markdown ul { list-style: disc; padding-left: 1.25rem; }
+.recall-markdown ol { list-style: decimal; padding-left: 1.25rem; }
+.recall-markdown pre { overflow-x: auto; border-radius: 0.5rem; background: #0f172a; padding: 0.75rem; color: #f8fafc; }
+.recall-markdown :not(pre) > code { border-radius: 0.25rem; background: rgb(15 23 42 / 10%); padding: 0.1rem 0.3rem; font-size: 0.85em; }
+.recall-markdown a { color: #4f46e5; text-decoration: underline; }
+.recall-markdown table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; }
+.recall-markdown img, .recall-markdown video { max-width: 100%; height: auto; }
+.recall-markdown th, .recall-markdown td { border: 1px solid rgb(15 23 42 / 14%); padding: 0.4rem 0.55rem; text-align: left; }
+.recall-markdown blockquote { border-left: 3px solid #4f46e5; padding-left: 0.75rem; color: rgb(15 23 42 / 72%); }
+
+.recall-scrollbar { scrollbar-width: thin; scrollbar-color: rgb(79 70 229 / 45%) transparent; }
+.recall-scrollbar::-webkit-scrollbar { display: block; width: 0.45rem; height: 0.45rem; }
+.recall-scrollbar::-webkit-scrollbar-thumb { border-radius: 999px; background: rgb(79 70 229 / 35%); }
+
+@media (max-width: 639px) {
+  .recall-markdown pre { margin-inline: -0.25rem; border-radius: 0.4rem; }
 }
