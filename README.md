@@ -2,7 +2,7 @@
 
 RecallAI is a document-question-answering application. Upload up to five PDFs, then chat with an assistant that searches the uploaded content and returns grounded answers as streaming Markdown.
 
-**Live Demo:** `https://your-recallai-deployment-url.vercel.app`
+**Live Demo:** `https://ds-recallai.vercel.app/`
 
 ## What is implemented
 
